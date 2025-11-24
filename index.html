@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Gerador de Frases Aleatórias</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 80px;
+        }
+        #frase {
+            font-size: 1.6em;
+            margin: 20px;
+            padding: 20px;
+            border: 2px solid #333;
+            border-radius: 10px;
+            display: inline-block;
+            max-width: 600px;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 1.2em;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Gerador de Frases Aleatórias</h1>
+
+    <div id="frase">Clique no botão para gerar uma frase!</div>
+    <br><br>
+
+    <button onclick="gerarFrase()">Gerar Frase</button>
+
+    <script>
+        // Lista de frases
+        const frases = [
+            "O sucesso é a soma de pequenos esforços repetidos diariamente.",
+            "A persistência é o caminho do êxito.",
+            "Acredite em você e tudo será possível.",
+            "A jornada é tão importante quanto o destino.",
+            "Você é mais forte do que imagina.",
+            "Nunca é tarde para recomeçar."
+        ];
+
+        function gerarFrase() {
+            let indice = Math.floor(Math.random() * frases.length);
+            document.getElementById("frase").innerText = frases[indice];
+        }
+    </script>
+
+</body>
+</html>
